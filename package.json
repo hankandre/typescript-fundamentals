@@ -9,7 +9,7 @@
     "clean": "rimraf dist",
     "test": "jest --watch --no-cache",
     "test:ci": "bash -c 'npm run build:dev $EXERCISE && jest --no-cache $EXERCISE'",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "build:dev": "webpack --progress --profile --colors --env",
     "build:dist": "webpack --optimize-minimize --define process.env.NODE_ENV='production' --progress --profile --colors --env "
   },
@@ -31,6 +31,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "jest": "^21.0.1",
     "node-sass": "^4.5.2",
+    "nodemon": "^1.12.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-transform-catch-errors": "^1.0.0",
